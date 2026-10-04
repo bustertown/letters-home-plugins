@@ -1,0 +1,11 @@
+{
+  "name": "letters-home-mail-export",
+  "version": "0.1.0",
+  "description": "Help users organize Gmail messages under an export label and request a selected Google Takeout download.",
+  "author": {
+    "name": "Letters Home",
+    "email": "support@sendlettershome.com",
+    "url": "https://sendlettershome.com"
+  },
+  "homepage": "https://sendlettershome.com"
+}

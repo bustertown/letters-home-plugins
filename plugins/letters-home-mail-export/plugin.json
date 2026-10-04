@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "letters-home-mail-export",
+  "version": "0.1.0",
+  "description": "Help users organize Gmail messages under an export label and request a selected Google Takeout download.",
+  "author": {
+    "name": "Letters Home",
+    "email": "support@sendlettershome.com",
+    "url": "https://sendlettershome.com"
+  },
+  "homepage": "https://sendlettershome.com",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/prepare-gmail-export/SKILL.md",
+      "interface": {
+        "displayName": "Letters Home Mail Export",
+        "shortDescription": "Prepare a Gmail mail export",
+        "longDescription": "Guides you through finding Gmail messages involving an address, applying an export label, and requesting a label-specific Google Takeout archive. With browser controls supplied by your host and your permission, your agent can help operate the signed-in pages; otherwise it provides manual instructions. Sign-in, security checks, export processing, and download remain controlled by Google. The skill supplies no Gmail API connection, local mail filter, or automatic upload. Sender searches include replies; choosing original messages only requires a separate filtering step. Browser content may be visible to your AI host, so review its privacy settings before granting access.",
+        "developerName": "Letters Home",
+        "category": "Productivity",
+        "capabilities": ["Export guidance"],
+        "websiteURL": "https://sendlettershome.com",
+        "supportURL": "https://sendlettershome.com/contact",
+        "privacyPolicyURL": "https://sendlettershome.com/privacy-policy",
+        "termsOfServiceURL": "https://sendlettershome.com/terms-of-use",
+        "defaultPrompt": [
+          "Help me label emails from one address and export them through Google Takeout.",
+          "Help me export both sides of my correspondence with one person.",
+          "Walk me through a Gmail export without accessing my browser."
+        ],
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "publication": {
+        "release_notes": "Initial export-assistance skill with Gmail search, bulk labeling, selected Takeout export, and manual fallback."
+      }
+    }
+  }
+}

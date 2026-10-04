@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "letters-home-email-import",
+  "version": "0.3.1",
+  "description": "Choose original messages or both directions locally and guide private collection upload.",
+  "author": {
+    "name": "Letters Home",
+    "email": "support@sendlettershome.com",
+    "url": "https://sendlettershome.com"
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/email-import/SKILL.md",
+      "interface": {
+        "displayName": "Letters Home Email Import",
+        "shortDescription": "Import saved email privately",
+        "longDescription": "Guides provider export, filters local MBOX by the user's explicit choice without Gmail OAuth, checks the selected archive, and opens the authenticated Letters Home upload flow.",
+        "developerName": "Letters Home",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Help me choose original messages or both sides of correspondence to add to my collection.",
+          "Help me prepare an Apple Mail export for upload.",
+          "Check a saved-email archive before I upload it."
+        ],
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png",
+        "websiteURL": "https://sendlettershome.com",
+        "supportURL": "https://sendlettershome.com/contact",
+        "privacyPolicyURL": "https://sendlettershome.com/privacy-policy",
+        "termsOfServiceURL": "https://sendlettershome.com/terms-of-use"
+      }
+    }
+  },
+  "homepage": "https://sendlettershome.com"
+}

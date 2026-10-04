@@ -1,0 +1,32 @@
+{
+  "name": "letters-home",
+  "interface": {
+    "displayName": "Letters Home"
+  },
+  "plugins": [
+    {
+      "name": "letters-home-mail-export",
+      "source": {
+        "source": "local",
+        "path": "./plugins/letters-home-mail-export"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "letters-home-email-import",
+      "source": {
+        "source": "local",
+        "path": "./plugins/letters-home-email-import"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

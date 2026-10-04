@@ -1,0 +1,31 @@
+{
+  "name": "letters-home-email-import",
+  "displayName": "Letters Home Email Import",
+  "version": "0.3.1",
+  "description": "Filter saved email locally and guide upload to a private Letters Home collection.",
+  "author": {
+    "name": "Letters Home",
+    "email": "support@sendlettershome.com",
+    "url": "https://sendlettershome.com"
+  },
+  "mcpServers": {
+    "letters_home_email_import": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/dist/index.mjs"
+      ],
+      "env": {
+        "LETTERS_HOME_IMPORT_DIR": "${user_config.import_directory}"
+      }
+    }
+  },
+  "userConfig": {
+    "import_directory": {
+      "type": "directory",
+      "title": "Email import folder",
+      "description": "Choose the local folder containing your exported MBOX files. The filter can read and write only inside this folder.",
+      "required": true
+    }
+  },
+  "homepage": "https://sendlettershome.com"
+}

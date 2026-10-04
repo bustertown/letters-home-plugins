@@ -1,0 +1,22 @@
+{
+  "name": "letters-home",
+  "owner": {
+    "name": "Letters Home",
+    "email": "support@sendlettershome.com"
+  },
+  "metadata": {
+    "description": "Gmail export guidance and private local email import for Letters Home."
+  },
+  "plugins": [
+    {
+      "name": "letters-home-mail-export",
+      "source": "./plugins/letters-home-mail-export",
+      "description": "Help users organize Gmail messages under an export label and request a selected Google Takeout download."
+    },
+    {
+      "name": "letters-home-email-import",
+      "source": "./plugins/letters-home-email-import/claude-code",
+      "description": "Choose original messages or both directions locally and guide private collection upload."
+    }
+  ]
+}

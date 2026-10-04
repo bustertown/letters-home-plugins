@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "letters_home_email_import": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["dist/index.mjs"],
+      "cwd": ".",
+      "env_vars": ["LETTERS_HOME_IMPORT_DIR", "LETTERS_HOME_BASE_URL"]
+    }
+  }
+}

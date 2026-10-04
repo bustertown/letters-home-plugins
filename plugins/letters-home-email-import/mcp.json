@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "letters_home_email_import": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["dist/index.mjs"],
+      "env": {
+        "LETTERS_HOME_IMPORT_DIR": "${PLUGIN_DATA}"
+      }
+    }
+  }
+}

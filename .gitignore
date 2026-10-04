@@ -1,0 +1,7 @@
+node_modules/
+*.mbox
+*.eml
+*.zip
+*.partial
+.env*
+.DS_Store
