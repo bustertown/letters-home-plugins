@@ -16,9 +16,23 @@ Checked October 3, 2026. Read when precision, missing controls, large archives, 
 
 - Exact address: Google documents quoting a search such as `"from:person@example.com"` to limit alias expansion. Treat this as a narrower candidate query, not proof of RFC-header equality or perfect completeness. Confirm visible matches; use local filtering for exact selected headers afterward.
 - Dates: the operators page does not settle every inclusive boundary/timezone interpretation. Next-day `before:` for an inclusive final day is a working convention; verify boundary messages. Do not present it as a verified guarantee.
-- Missing bulk selection: Google documents sorting; the inference that Most recent restores the bulk control needs live confirmation. Try it only when visible, then verify selection. Stop at a bounded batch/manual handoff if unavailable.
+- Missing bulk selection: Google documents sorting; the inference that Most recent restores the bulk control needs live confirmation. Try it only when visible, then verify selection. Use the page-by-page procedure if unavailable; guide it manually when browser controls are absent.
 - Missing Takeout label: verify account and saved label, refresh the selector once if appropriate, then report the limitation. No documented propagation deadline is established here.
 - Download recovery: Google says archives expire after about seven days and allows five downloads per archive. Inspect readiness/expiry first; request a replacement only with the user's authorization. Archive-part size limits ZIP containers, not necessarily the extracted MBOX or importer limits.
+
+## Page-by-page labeling
+
+Use this fallback when the verified search has multiple pages and no working all-results selection. Prefer the verified bulk control when available. These are workflow safeguards, not promises about Google's UI.
+
+1. Keep the original search and agreed scope unchanged; use chronological ordering if the visible UI supports it. Do not search for messages lacking the new label while advancing page offsets: labeling would remove rows from that search and cause skipped pages.
+2. Start from the first page, or the last verified checkpoint when resuming. Record the current query, account context, label, sort order, conversation-view setting, displayed range/count units, and completed ranges privately in working state. Report safe progress in chat without subjects or private row details.
+3. Verify the page contains actual matching Mail results, not related suggestions, and check visible metadata for scope problems without opening bodies. Conversation rows remain candidates; do not claim every contained message matches. Select the current page using its checkbox. Verify the selected range/unit; apply the export label without clearing other labels. Confirm the operation completed before advancing. Clear selection if it persists across navigation.
+4. Use the visible next-page control. Check that the range advances and the query remains the same; then repeat. Do not invent page URLs, assume a fixed page size, skip ranges, or open message bodies to track rows. Check that the last partial page is included.
+5. Continue while progress and scope remain verifiable. Stop on exhausted results (no next page), cancellation, changed totals/order, unexpected related results, failed label application, or a host interruption. If the result set changes, return to the first page of the same search and recheck; applying an existing label again is harmless, whereas blindly resuming an offset can skip messages. Do not loop indefinitely through a changing mailbox: report partial completion and propose a stable bounded date scope if needed.
+6. On interruption, inspect the existing label and saved checkpoint. If the last page's application is uncertain, verify or reapply the same label to that page; do not create another label. If the original checkpoint cannot be verified, restart from the first page of the unchanged search with the same authorized label.
+7. At exhaustion, verify the label view and compare observed coverage using compatible units. Counts can be estimates or conversations; do not sum them as exact message totals. State whether all visible matching pages were covered and disclose any uncertainty. Request Takeout only once the full intended candidate set is verified; partial coverage is not a complete export.
+
+In manual mode, give a short loop: select this page → apply the label → verify → next page, repeat until Next is unavailable. Ask the user to report the final range and whether any page failed; distinguish user-reported completion from browser-observed completion.
 
 ## Alternatives and unresolved evidence
 

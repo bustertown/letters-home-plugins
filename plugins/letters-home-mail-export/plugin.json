@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "letters-home-mail-export",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Help users organize Gmail messages under an export label and request a selected Google Takeout download.",
   "author": {
     "name": "Letters Home",
@@ -34,7 +34,7 @@
         "logo": "./assets/logo.png"
       },
       "publication": {
-        "release_notes": "Research-refined export guidance: related-result checks, verified bulk selection, explicit originals/filter handoff, and conditional Google troubleshooting evidence."
+        "release_notes": "Add verified page-by-page Gmail labeling with progress tracking and interruption recovery, alongside researched export guidance."
       }
     }
   }
