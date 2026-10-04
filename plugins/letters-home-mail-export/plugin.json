@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "letters-home-mail-export",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Help users organize Gmail messages under an export label and request a selected Google Takeout download.",
   "author": {
     "name": "Letters Home",
@@ -18,7 +18,9 @@
         "longDescription": "Guides you through finding Gmail messages involving an address, applying an export label, and requesting a label-specific Google Takeout archive. With browser controls supplied by your host and your permission, your agent can help operate the signed-in pages; otherwise it provides manual instructions. Sign-in, security checks, export processing, and download remain controlled by Google. The skill supplies no Gmail API connection, local mail filter, or automatic upload. Sender searches include replies; choosing original messages only requires a separate filtering step. Browser content may be visible to your AI host, so review its privacy settings before granting access.",
         "developerName": "Letters Home",
         "category": "Productivity",
-        "capabilities": ["Export guidance"],
+        "capabilities": [
+          "Export guidance"
+        ],
         "websiteURL": "https://sendlettershome.com",
         "supportURL": "https://sendlettershome.com/contact",
         "privacyPolicyURL": "https://sendlettershome.com/privacy-policy",
@@ -32,7 +34,7 @@
         "logo": "./assets/logo.png"
       },
       "publication": {
-        "release_notes": "Initial export-assistance skill with Gmail search, bulk labeling, selected Takeout export, and manual fallback."
+        "release_notes": "Research-refined export guidance: related-result checks, verified bulk selection, explicit originals/filter handoff, and conditional Google troubleshooting evidence."
       }
     }
   }
