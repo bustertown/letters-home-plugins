@@ -21,7 +21,22 @@ claude plugin install letters-home-mail-export@letters-home
 claude plugin install letters-home-email-import@letters-home
 ```
 
-Install either or both, then restart your host. Try: “Help me export emails from one address and import them into Letters Home.”
+Install either or both, then restart your host.
+
+## How do I use this?
+
+Ask your agent: **“Help me export emails from alex@example.com and upload them to my Letters Home collection.”** Already have an export? Say **“Help me import this MBOX.”**
+
+The agent guides the export, asks which messages to keep, filters the downloaded archive, and helps upload it to the collection you choose.
+
+| Choose | What you keep |
+| --- | --- |
+| **Original messages only** | Messages from that address that do not look like replies. Replies from either side are excluded when detected. |
+| **Both sides, including replies** | Messages to or from that address, including replies, for a two-way conversation. |
+
+“Both sides” selects matching messages, not every message Gmail groups into a thread. Original-only detection can miss replies; quoted text inside a selected message is retained. Review results before uploading.
+
+You handle sign-in and Google’s export download. Browser assistance depends on your agent’s capabilities; manual steps are provided when needed.
 
 ## Privacy and setup
 
